@@ -4,14 +4,20 @@ import { connect } from 'react-redux';
 import Login from './Login/Login.js';
 class App extends Component {
   render() {
+
+    let content;
     if (this.props.token) {
-      return <p>Logged in as {this.props.token}!</p>
+      content = <p>Logged in as {this.props.token}!</p>
     }
     else {
-      return (
-        <Login></Login>
-      );
+      content = <Login></Login>;
     }
+
+    return (
+      <div className='container'>
+        {content}
+      </div>
+    )
   }
 }
 
@@ -29,3 +35,5 @@ export default connect(
   mapStateToProps,
   null
 )(App);
+
+export { App as ShallowApp };

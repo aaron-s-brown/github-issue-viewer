@@ -23,7 +23,6 @@ class Login extends React.Component {
 
   handleSubmit= event => {
     this.props.setToken(this.state.apiKey);
-    console.log(this.state.apiKey);
     event.preventDefault();
   };
   
@@ -48,3 +47,5 @@ export default connect(
   null,
   {setToken}
 )(Login);
+
+export { Login as ShallowLogin };
