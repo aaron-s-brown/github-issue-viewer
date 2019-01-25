@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Login from './Login/Login.js';
+import './index.less';
 class App extends Component {
   render() {
 

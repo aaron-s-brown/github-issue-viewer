@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { SET_TOKEN } from '../ActionTypes';
@@ -11,10 +11,10 @@ const setToken = token => ({
   token
 });
 
-class Login extends React.Component { 
+class Login extends Component { 
 
   state = {
-    apiKey: '1'
+    apiKey: ''
   };
 
   inputChange = event => {
@@ -28,11 +28,11 @@ class Login extends React.Component {
   
   render() {
     return (
-    <div className='container'>  
+    <div className='login'>  
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor='apiKey'>Enter your Github API key</label>
-        <input type='text' id='apiKey' onChange={this.inputChange} value={this.state.apiKey}></input>
-        <input type='submit' value='Submit'></input>
+        <label htmlFor='apiKey' className='login-label'>Enter your Github API key</label>
+        <input type='text' id='apiKey' className='apiKey' onChange={this.inputChange} value={this.state.apiKey}></input>
+        <input type='submit' value='Submit' className='login-submit'></input>
       </form>
     </div>
     );
