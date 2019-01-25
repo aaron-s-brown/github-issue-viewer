@@ -1,12 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import RepoItem from './RepoItem';
-
-
-
 class RepoList extends Component {
-
-  
 
   render() {
     let repoList;

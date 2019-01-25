@@ -1,3 +1,21 @@
-.repo-list-container {
-  padding: 10px;
+.issue-viewer-container {
+  .repo-list-container {
+    padding: 10px;
+  }
+
+  .issue-list-container {
+    padding: 10px;
+  }
+
+  @media screen and (min-width: 50rem) {
+    display: flex;
+
+    .repo-list-container {
+      flex: 0 1 auto;
+    }
+  
+    .issue-list-container {
+      flex: 1 1 auto;
+    }
+  }
 }

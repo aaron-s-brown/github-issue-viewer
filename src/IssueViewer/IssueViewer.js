@@ -5,6 +5,7 @@ import axios from 'axios';
 import { SAVE_REPO_LIST, SET_REPO_FAILURE } from '../ActionTypes';
 import RepoList from './RepoList/RepoList';
 import './IssueViewer.less';
+import IssueList from './IssueList/IssueList';
 
 
 /*
@@ -50,12 +51,12 @@ class IssueViewer extends Component {
 
   render() {
     return (
-    <div>
+    <div className='issue-viewer-container'>
       <div className='repo-list-container'>
         <RepoList></RepoList>
       </div>
       <div className='issue-list-container'>
-        Issue List
+        <IssueList></IssueList>
       </div>
     </div>
     )
@@ -65,7 +66,8 @@ class IssueViewer extends Component {
 IssueViewer.propTypes = {
   token: PropTypes.string,
   saveRepoList: PropTypes.func.isRequired,
-  setRepoFailure: PropTypes.func.isRequired
+  setRepoFailure: PropTypes.func.isRequired,
+  generateRepoList: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
