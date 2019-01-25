@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`no token case renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="header-container"
+  >
+    <span
+      className="header-text"
+    >
+      Github Issue Viewer
+    </span>
+  </div>
+  <div
+    className="login"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        className="login-label"
+        htmlFor="apiKey"
+      >
+        Enter your Github API key
+      </label>
+      <input
+        className="apiKey"
+        id="apiKey"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <input
+        className="login-submit"
+        type="submit"
+        value="Submit"
+      />
+    </form>
+  </div>
+</div>
+`;
