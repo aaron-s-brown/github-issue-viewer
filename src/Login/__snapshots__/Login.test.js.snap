@@ -2,23 +2,26 @@
 
 exports[`<Login> renders correctly 1`] = `
 <div
-  className="container"
+  className="login"
 >
   <form
     onSubmit={[Function]}
   >
     <label
+      className="login-label"
       htmlFor="apiKey"
     >
       Enter your Github API key
     </label>
     <input
+      className="apiKey"
       id="apiKey"
       onChange={[Function]}
       type="text"
-      value="1"
+      value=""
     />
     <input
+      className="login-submit"
       type="submit"
       value="Submit"
     />

@@ -7,11 +7,11 @@ exports[`no token case renders correctly 1`] = `
   <div
     className="header-container"
   >
-    <span
+    <h1
       className="header-text"
     >
       Github Issue Viewer
-    </span>
+    </h1>
   </div>
   <div
     className="login"

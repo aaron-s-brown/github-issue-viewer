@@ -38,5 +38,4 @@ describe('no token case', () => {
 it('renders success message if token is present', () => {
   const app = shallow(<ShallowApp token='12345'></ShallowApp>);
   expect(app.find(Login).length).toBe(0);
-  expect(app.find('p').length).toBe(1);
 });
