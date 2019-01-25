@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Login from './Login/Login.js';
-import { Provider } from 'react-redux';
-import { initializeStore } from './ReduxStore';
-
-const store = initializeStore();
 class App extends Component {
   render() {
-    return (
-      <Provider store={store}><Login></Login></Provider>
-    );
+    if (this.props.token) {
+      return <p>Logged in as {this.props.token}!</p>
+    }
+    else {
+      return (
+        <Login></Login>
+      );
+    }
   }
 }
 
-export default App;
+App.propTypes = {
+  token: PropTypes.string
+};
+
+function mapStateToProps(state) {
+  return {
+    token: state.auth.token
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  null
+)(App);
