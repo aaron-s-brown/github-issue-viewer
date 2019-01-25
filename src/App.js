@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Login from './Login/Login.js';
-import './index.less';
+import './global.less';
+import Header from './Header/Header.js';
 class App extends Component {
   render() {
 
@@ -16,6 +17,7 @@ class App extends Component {
 
     return (
       <div className='container'>
+        <Header></Header>
         {content}
       </div>
     )
