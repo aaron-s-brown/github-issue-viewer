@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 import Login from './Login/Login.js';
 import './global.less';
 import Header from './Header/Header.js';
+import IssueViewer from './IssueViewer/IssueViewer.js';
 class App extends Component {
   render() {
 
     let content;
     if (this.props.token) {
-      content = <p>Logged in as {this.props.token}!</p>
+      content = <IssueViewer></IssueViewer>
     }
     else {
       content = <Login></Login>;

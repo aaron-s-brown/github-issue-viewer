@@ -16,7 +16,7 @@ const Header = ({token, clearToken}) => {
   const showLogout = !!token;
   return (
     <div className='header-container'>
-      <span className='header-text'>Github Issue Viewer</span>
+      <h1 className='header-text'>Github Issue Viewer</h1>
       {showLogout && 
       <button className='logout-button' onClick={clearToken}>Logout</button>
       }
